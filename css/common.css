@@ -1,0 +1,50 @@
+/* 테스트 css */
+.test {
+  position: fixed;
+}
+
+body > div {
+  overflow: hidden;
+}
+.wrap {
+  max-width: 1280px;
+  width: 90%;
+  margin: auto;
+  font-size: 24px;
+}
+
+.wrap > * {
+  position: relative;
+}
+
+.common_button {
+  text-transform: uppercase;
+  background-color: brown;
+  color: white;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  border-radius: 0 2rem 0 2rem;
+}
+
+/* <a href="#" class="common_button">
+              Explore product
+              <img src="" alt="" />
+            </a> */
+
+.common_button img {
+  content: url(/img/common/ArrowDownRight.svg);
+  position: relative;
+  top: 8px;
+}
+
+.wrap section:not(:last-of-type) .inner::after {
+  content: '';
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url(/img/common/Separator.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}

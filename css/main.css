@@ -1,0 +1,704 @@
+.head {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.head .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head .gnb {
+  display: flex;
+  gap: 2rem;
+}
+
+.sec1 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.sec1 h2 {
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+.sec1 p {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  line-height: 2rem;
+}
+
+.sec1 ul {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec1 img {
+  width: 100%;
+}
+
+.sec2 {
+  padding: 5rem;
+}
+
+.sec2 ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec2 li {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.sec2 li:not(:last-of-type)::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  right: 0;
+  background-image: url(/img/common/Intersect.svg);
+  background-repeat: no-repeat;
+}
+
+.sec2 strong {
+  font-size: 4rem;
+}
+
+.sec2 span {
+  font-size: 20px;
+  line-height: 3rem;
+}
+
+.sec3 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.sec3 .title {
+  text-align: center;
+}
+
+.sec3 .title h2 {
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+.sec3 .main {
+  text-align: center;
+}
+
+.sec3 .btns {
+  background-color: lightgray;
+  border-radius: 2rem;
+  display: inline-block;
+  position: relative;
+  width: 560px;
+  height: 80px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.sec3 .btns::before {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 30%;
+  height: 80%;
+  top: 10%;
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+
+.sec3 .main.Arabica_on .btns::before {
+  left: 2%;
+}
+
+.sec3 .main.Arabica_on .Arabica_Swiper {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sec3 .main.Robusta_on .btns::before {
+  left: 35%;
+}
+
+.sec3 .main.Robusta_on .Robusta_Swiper {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sec3 .main.Liberica_on .btns::before {
+  left: 68%;
+}
+
+.sec3 .main.Liberica_on .Liberica_Swiper {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sec3 .btns button {
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  position: absolute;
+  width: 30%;
+  height: 80%;
+  top: 10%;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.sec3 .btns .Arabica_btn {
+  left: 2%;
+}
+
+.sec3 .btns .Robusta_btn {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sec3 .btns .Liberica_btn {
+  right: 2%;
+}
+
+.sec3 .swipers {
+  overflow: hidden;
+  height: 520px;
+  position: relative;
+}
+
+.sec3 .swipers > * {
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.sec3 .coffeeItem {
+  text-align: left;
+  position: relative;
+}
+
+.sec3 .coffeeItem > img:nth-of-type(1) {
+  width: 100%;
+}
+
+.sec3 .coffeeItem h3 {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.sec3 .coffeeItem p {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  font-size: 19px;
+}
+
+.sec3 .coffeeItem p img {
+  padding-right: 1rem;
+  content: url(/img/common/Star\ 1.svg);
+}
+
+.sec3 .coffeeItem > span {
+  padding-left: 1rem;
+}
+
+.sec3 .coffeeItem > img:nth-last-of-type(1) {
+  content: url(/img/sec3/Plus.svg);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.sec3 .coffeeItem a {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sec3 .coffeeItem .bold {
+  font-weight: bold;
+}
+
+.sec3 .swiper-pagination-bullet-active {
+  background-color: brown;
+}
+
+.sec4 {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.sec4 h2 {
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.sec4 .main {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec4 .left {
+  width: 49%;
+  text-align: left;
+}
+
+.sec4 .left p {
+  padding-bottom: 5rem;
+}
+
+.sec4 .right {
+  width: 49%;
+  position: relative;
+}
+
+.sec4 .right > * {
+  width: 45%;
+}
+
+.sec4 img:nth-of-type(1) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.sec4 img:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sec5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.sec5 .title {
+  padding-bottom: 5rem;
+}
+
+.sec5 h2 {
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.sec5 .TestimonialItem {
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+
+.sec5 .top {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.sec5 .right {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+
+.sec5 .right h3 {
+  padding-bottom: 1rem;
+}
+
+.sec5 .right div {
+  display: flex;
+  gap: 8px;
+}
+
+.sec5 .bottom {
+  text-align: left;
+  padding-bottom: 5rem;
+}
+
+.sec5 .swiper-pagination-bullet-active {
+  background-color: brown;
+}
+
+.sec6 {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.sec6 h2 {
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+.sec6 ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.sec6 li {
+  border: 3px solid lightgray;
+  border-radius: 0 20% 0 10%;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.sec6 li > img {
+  width: 100%;
+}
+
+.sec6 .left_right {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.sec6 p {
+  text-align: left;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.sec6 .item_bottom {
+  text-align: right;
+  font-size: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.sec6 li a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sec6 .bottom {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+.foot {
+  color: white;
+  padding-bottom: 5rem;
+}
+
+.foot::before {
+  content: '';
+  position: absolute;
+  width: 400%;
+  height: 100%;
+  left: -150%;
+  background-color: #282a3a;
+  z-index: -1;
+}
+
+.foot .inner {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.foot .inner > div:nth-of-type(1) {
+  flex: 1;
+}
+
+.foot .inner > div:nth-of-type(2) {
+  flex: 2;
+}
+
+.foot h2 {
+  font-size: 3rem;
+}
+
+.foot h2 strong {
+  position: relative;
+  top: -1rem;
+}
+
+.foot div:nth-of-type(1) p {
+  padding-top: 2.5rem;
+}
+
+.foot .top {
+  display: flex;
+  gap: 1rem;
+}
+
+.foot .top div:nth-of-type(1),
+.foot .top div:nth-of-type(2) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.foot .top div:nth-of-type(1) a,
+.foot .top div:nth-of-type(2) a {
+  padding-top: 1rem;
+}
+.foot .top div:nth-of-type(3) {
+  flex: 1.5;
+}
+
+.foot .top div:nth-of-type(3) > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.foot .top a {
+  font-size: 1rem;
+}
+
+.foot .bottom h3 {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.foot .bottom div {
+  background-color: #393b49;
+  padding-top: 0rem;
+  padding-left: 1rem;
+  padding-bottom: 0rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.foot .bottom div > * {
+  /* border: 1px solid red; */
+}
+
+.foot .bottom div img {
+  flex: 1;
+}
+
+.foot .bottom div input {
+  flex: 14;
+  background-color: #393b49;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.foot .bottom div button {
+  flex: 4;
+  background-color: brown;
+  color: white;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.foot h3 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .head {
+    font-size: 1rem;
+    text-wrap: nowrap;
+  }
+
+  .head img {
+    transform: scale(0.5);
+  }
+
+  .sec2 {
+    padding: 0;
+  }
+
+  .sec2 strong {
+    font-size: 3rem;
+  }
+
+  .sec2 span {
+    font-size: 20px;
+    line-height: 1rem;
+  }
+
+  .sec3 {
+    padding-bottom: 0;
+  }
+
+  .sec3 .btns {
+    width: 400px;
+  }
+
+  .sec3 .btns * {
+    font-size: 1.5rem !important;
+  }
+
+  .sec3 .swipers {
+    height: 320px !important;
+  }
+
+  .sec3 .coffeeItem h3 {
+    font-size: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .sec3 .coffeeItem p:nth-of-type(1) {
+    padding-left: 0rem;
+  }
+
+  .sec3 .coffeeItem p {
+    font-size: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .sec3 .coffeeItem p span {
+    font-size: 7px;
+    position: relative;
+    top: -2px;
+  }
+
+  .sec3 .coffeeItem p img {
+    padding-right: 0;
+    transform: scale(0.5);
+  }
+
+  .sec3 .coffeeItem > span {
+    padding-left: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .sec3 .coffeeItem img:nth-last-of-type(1) {
+    transform: scale(0.5) translateX(50%) translateY(50%);
+  }
+
+  .sec4 a {
+    font-size: 1rem;
+  }
+
+  .sec5 .TestimonialItem {
+    padding-left: 0;
+  }
+
+  .sec5 .TestimonialItem .top {
+    flex-direction: column;
+  }
+
+  .sec5 .right h3 {
+    height: 60px;
+  }
+
+  .sec5 .right div {
+    gap: 0rem;
+    justify-content: space-between;
+  }
+
+  .sec5 p {
+    font-size: 1rem;
+  }
+
+  .sec6 li {
+    width: 30%;
+  }
+
+  .sec6 .left_right img {
+    transform: scale(0.5);
+  }
+
+  .sec6 span {
+    font-size: 0.3rem;
+    position: relative;
+    top: -7px;
+  }
+
+  .sec6 p {
+    font-size: 0.5rem;
+    line-height: 0.5rem;
+  }
+
+  .foot .inner {
+    gap: 0;
+  }
+
+  .foot img {
+    transform: scale(0.25);
+  }
+
+  .foot h2 {
+    font-size: 1rem;
+  }
+
+  .foot h2 a {
+    display: flex;
+  }
+
+  .foot h2 strong {
+    top: 1rem;
+    left: -1rem;
+  }
+
+  .foot h3 {
+    font-size: 0.75rem;
+  }
+
+  .foot p {
+    font-size: 0.5rem;
+  }
+
+  .foot .top a {
+    font-size: 0.5rem;
+  }
+
+  .foot .top div:nth-of-type(3) > div img {
+    transform: scale(1);
+    width: 100%;
+  }
+
+  .foot .bottom div {
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+    gap: 0rem;
+  }
+
+  .foot .bottom div > img {
+    width: 100%;
+    transform: scale(1);
+  }
+
+  .foot .bottom div > input {
+    width: 0px;
+    font-size: 1rem;
+  }
+
+  .foot .bottom div button {
+    flex: 1;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.5rem;
+  }
+}
