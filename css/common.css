@@ -1,6 +1,40 @@
 /* 테스트 css */
 .test {
   position: fixed;
+  /* border: 1px solid red; */
+  /* font-size: 100%; */
+}
+
+/* 검색 화면 */
+.SeachScreen {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.SeachScreen.On {
+  visibility: visible;
+  opacity: 1;
+}
+
+.SeachScreen input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(2) translate(-50%, -50%);
+}
+.SeachScreen button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(2) translate(calc(-50% + 7rem), -50%);
 }
 
 body > div {

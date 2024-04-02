@@ -65,3 +65,21 @@ var Testimonial_Swiper = new Swiper('.Testimonial_Swiper', {
     clickable: true,
   },
 });
+
+const SeachBtn = document.querySelector('.SeachBtn');
+const SeachScreen = document.querySelector('.SeachScreen');
+const SeachInput = document.querySelector('.SeachScreen input');
+
+SeachBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  SeachScreen.classList.add('On');
+  setTimeout(() => {
+    SeachInput.focus();
+  }, 300);
+});
+
+SeachScreen.addEventListener('click', (e) => {
+  if (e.target === SeachScreen) {
+    SeachScreen.classList.remove('On');
+  }
+});

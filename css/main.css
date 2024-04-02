@@ -521,14 +521,28 @@
   font-size: 2rem;
 }
 
-@media screen and (max-width: 1024px) {
-  .head {
-    font-size: 1rem;
-    text-wrap: nowrap;
+/* @media screen and (max-width: 1024px) { */
+/* 브라우저마다 스크롤바 다를 수 있음 */
+@media screen and (max-width: 1042px) {
+  .head .inner {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .head img {
-    transform: scale(0.5);
+  .head .inner h1 {
+    order: 1;
+    width: 50%;
+    text-align: center;
+  }
+  .head .inner nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+  .head .inner div {
+    order: 2;
+    width: 50%;
+    text-align: center;
   }
 
   .sec2 {
