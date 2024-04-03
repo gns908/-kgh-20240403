@@ -64,7 +64,7 @@
   width: 2px;
   height: 100%;
   right: 0;
-  background-image: url(/img/common/Intersect.svg);
+  background-image: url(../img/common/Intersect.svg);
   background-repeat: no-repeat;
 }
 
@@ -225,7 +225,7 @@
 
 .sec3 .coffeeItem p img {
   padding-right: 1rem;
-  content: url(/img/common/Star1.svg);
+  content: url(../img/common/Star1.svg);
 }
 
 .sec3 .coffeeItem > span {
@@ -236,7 +236,7 @@
 }
 
 .sec3 .coffeeItem > img:nth-last-of-type(1) {
-  content: url(/img/sec3/Plus.svg);
+  content: url(../img/sec3/Plus.svg);
   position: absolute;
   bottom: 0;
   right: 0;
