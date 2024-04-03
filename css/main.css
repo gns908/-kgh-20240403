@@ -100,46 +100,16 @@
   border-radius: 2rem;
   display: inline-block;
   position: relative;
-  width: 560px;
+  /* width: 560px; */
+  /* width: 480px; */
+  width: 220px;
   height: 80px;
   margin-top: 4rem;
   margin-bottom: 2rem;
+  /* font-size: 1px; */
 }
 
-.sec3 .btns::before {
-  content: '';
-  position: absolute;
-  background-color: white;
-  width: 30%;
-  height: 80%;
-  top: 10%;
-  border-radius: 2rem;
-  transition: 0.3s;
-}
-
-.sec3 .main.Arabica_on .btns::before {
-  left: 2%;
-}
-
-.sec3 .main.Arabica_on .Arabica_Swiper {
-  visibility: visible;
-  opacity: 1;
-}
-
-.sec3 .main.Robusta_on .btns::before {
-  left: 35%;
-}
-
-.sec3 .main.Robusta_on .Robusta_Swiper {
-  visibility: visible;
-  opacity: 1;
-}
-
-.sec3 .main.Liberica_on .btns::before {
-  left: 68%;
-}
-
-.sec3 .main.Liberica_on .Liberica_Swiper {
+.sec3 .swipers > div.On {
   visibility: visible;
   opacity: 1;
 }
@@ -147,13 +117,14 @@
 .sec3 .btns button {
   border: none;
   background-color: transparent;
-  font-size: 2rem;
+  font-size: 12px;
   position: absolute;
   width: 30%;
   height: 80%;
   top: 10%;
   border-radius: 2rem;
   cursor: pointer;
+  z-index: 1;
 }
 
 .sec3 .btns .Arabica_btn {
@@ -171,7 +142,7 @@
 
 .sec3 .swipers {
   overflow: hidden;
-  height: 520px;
+  height: 480px;
   position: relative;
 }
 
@@ -182,11 +153,23 @@
   opacity: 0;
   position: absolute;
   transition: 0.3s;
+  /* border: 1px solid blue; */
+}
+
+.sec3 .swipers > * .swiper-wrapper {
+  /* border: 10px solid purple; */
+  height: 90%;
+}
+
+.sec3 .swipers > * .swiper-wrapper .swiper-slide {
+  /* border: 10px solid orange; */
 }
 
 .sec3 .coffeeItem {
-  text-align: left;
+  /* text-align: left; */
   position: relative;
+  height: 100%;
+  /* border: 3px solid red; */
 }
 
 .sec3 .coffeeItem > img:nth-of-type(1) {
@@ -194,16 +177,50 @@
 }
 
 .sec3 .coffeeItem h3 {
-  padding-top: 1rem;
+  /* padding-top: 1rem;
   padding-left: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1rem; */
   font-size: 1.3rem;
+  height: 4rem;
+  /* border: 3px solid orange; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  /* text-align: center; */
 }
 
 .sec3 .coffeeItem p {
+  /* padding-left: 1rem; */
+  /* padding-bottom: 1rem; */
+  /* font-size: 19px; */
+}
+
+.sec3 .coffeeItem p:nth-of-type(1) {
+  font-size: 13px;
+  text-align: left;
   padding-left: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   padding-bottom: 1rem;
-  font-size: 19px;
+}
+
+.sec3 .coffeeItem p:nth-of-type(1) span {
+  /* font-size: 13px;
+  text-align: left;
+  padding-left: 1rem; */
+  /* display: flex; */
+  /* justify-content: flex-start; */
+}
+
+.sec3 .coffeeItem p:nth-of-type(2) {
+  /* padding-left: 1rem; */
+  font-size: 1rem;
+  text-align: left;
+  padding-left: 1rem;
+  /* height: 1rem; */
+  /* border: 3px solid violet; */
 }
 
 .sec3 .coffeeItem p img {
@@ -212,7 +229,10 @@
 }
 
 .sec3 .coffeeItem > span {
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
+  position: absolute;
+  bottom: 8px;
+  left: 1rem;
 }
 
 .sec3 .coffeeItem > img:nth-last-of-type(1) {
@@ -558,7 +578,7 @@
     line-height: 1rem;
   }
 
-  .sec3 {
+  /* .sec3 {
     padding-bottom: 0;
   }
 
@@ -608,7 +628,7 @@
 
   .sec3 .coffeeItem img:nth-last-of-type(1) {
     transform: scale(0.5) translateX(50%) translateY(50%);
-  }
+  } */
 
   .sec4 a {
     font-size: 1rem;
