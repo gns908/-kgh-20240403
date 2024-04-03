@@ -63,7 +63,7 @@ body > div {
             </a> */
 
 .common_button img {
-  content: url(/img/common/ArrowDownRight.svg);
+  content: url(../img/common/ArrowDownRight.svg);
   position: relative;
   top: 8px;
 }
@@ -75,7 +75,7 @@ body > div {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-image: url(/img/common/Separator.svg);
+  background-image: url(../img/common/Separator.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
