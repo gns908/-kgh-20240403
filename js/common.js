@@ -88,85 +88,182 @@ const sec4main = document.querySelector('.sec4 .main');
 
 const sec6ul = document.querySelector('.sec6 ul');
 
+const headinner = document.querySelector('.head .inner');
+
+// .head .inner {
+//   flex-wrap: wrap;
+//   justify-content: center;
+// }
+
+// .head .inner h1 {
+//   order: 1;
+//   width: 50%;
+//   text-align: left;
+// }
+// .head .inner nav {
+//   order: 3;
+//   width: 100%;
+//   justify-content: center;
+//   flex-direction: column;
+//   align-items: center;
+// }
+// .head .inner div {
+//   order: 2;
+//   width: 50%;
+//   text-align: right;
+// }
+
 function handleResize() {
   test.textContent = document.documentElement.clientWidth;
 
   if (document.documentElement.clientWidth < 320) {
+    headinner.style.flexWrap = 'wrap';
+    headinner.style.justifyContent = 'center';
+
+    headinner.children[0].style.order = '1';
+    headinner.children[0].style.width = '50%';
+    headinner.children[0].style.textAlign = 'left';
+
+    headinner.children[1].style.order = '3';
+    headinner.children[1].style.width = '100%';
+    headinner.children[1].style.justifyContent = 'center';
+    headinner.children[1].style.flexDirection = 'column';
+    headinner.children[1].style.alignItems = 'center';
+
+    headinner.children[2].style.order = '2';
+    headinner.children[2].style.width = '50%';
+    headinner.children[2].style.textAlign = 'right';
+
     CoffeeSwipers.forEach((Swiper) => {
       Swiper.params.slidesPerView = 1;
       Swiper.params.spaceBetween = 8;
       Swiper.update();
-
-      sec4main.style.flexDirection = 'column';
-      sec4main.firstElementChild.style.width = '100%';
-      sec4main.firstElementChild.style.order = '2';
-      sec4main.lastElementChild.style.width = '100%';
-      sec4main.lastElementChild.style.order = '1';
-      sec4main.lastElementChild.firstElementChild.style.position = 'relative';
-      sec4main.lastElementChild.lastElementChild.style.position = 'relative';
-
-      Testimonial_Swiper.params.slidesPerView = 1;
-      Testimonial_Swiper.params.spaceBetween = 10;
-      Testimonial_Swiper.update();
-      sec6ul.style.flexDirection = 'column';
     });
+
+    sec4main.style.flexDirection = 'column';
+    sec4main.firstElementChild.style.width = '100%';
+    sec4main.firstElementChild.style.order = '2';
+    sec4main.lastElementChild.style.width = '100%';
+    sec4main.lastElementChild.style.order = '1';
+    sec4main.lastElementChild.firstElementChild.style.position = 'relative';
+    sec4main.lastElementChild.lastElementChild.style.position = 'relative';
+
+    Testimonial_Swiper.params.slidesPerView = 1;
+    Testimonial_Swiper.params.spaceBetween = 10;
+    Testimonial_Swiper.update();
+
+    sec6ul.style.flexDirection = 'column';
   } else if (document.documentElement.clientWidth < 640) {
+    headinner.style.flexWrap = 'wrap';
+    headinner.style.justifyContent = 'center';
+
+    headinner.children[0].style.order = '1';
+    headinner.children[0].style.width = '50%';
+    headinner.children[0].style.textAlign = 'left';
+
+    headinner.children[1].style.order = '3';
+    headinner.children[1].style.width = '100%';
+    headinner.children[1].style.justifyContent = 'center';
+    headinner.children[1].style.flexDirection = 'column';
+    headinner.children[1].style.alignItems = 'center';
+
+    headinner.children[2].style.order = '2';
+    headinner.children[2].style.width = '50%';
+    headinner.children[2].style.textAlign = 'right';
+
     CoffeeSwipers.forEach((Swiper) => {
       Swiper.params.slidesPerView = 2;
       Swiper.params.spaceBetween = 16;
       Swiper.update();
-
-      sec4main.style.flexDirection = 'column';
-      sec4main.firstElementChild.style.width = '100%';
-      sec4main.firstElementChild.style.order = '2';
-      sec4main.lastElementChild.style.width = '100%';
-      sec4main.lastElementChild.style.order = '1';
-      sec4main.lastElementChild.firstElementChild.style.position = 'relative';
-      sec4main.lastElementChild.lastElementChild.style.position = 'relative';
-
-      Testimonial_Swiper.params.slidesPerView = 2;
-      Testimonial_Swiper.params.spaceBetween = 20;
-      Testimonial_Swiper.update();
-      sec6ul.style.flexDirection = 'column';
     });
+
+    sec4main.style.flexDirection = 'column';
+    sec4main.firstElementChild.style.width = '100%';
+    sec4main.firstElementChild.style.order = '2';
+    sec4main.lastElementChild.style.width = '100%';
+    sec4main.lastElementChild.style.order = '1';
+    sec4main.lastElementChild.firstElementChild.style.position = 'relative';
+    sec4main.lastElementChild.lastElementChild.style.position = 'relative';
+
+    Testimonial_Swiper.params.slidesPerView = 2;
+    Testimonial_Swiper.params.spaceBetween = 20;
+    Testimonial_Swiper.update();
+
+    sec6ul.style.flexDirection = 'column';
   } else if (document.documentElement.clientWidth < 960) {
+    headinner.style.flexWrap = 'wrap';
+    headinner.style.justifyContent = 'center';
+
+    headinner.children[0].style.order = '1';
+    headinner.children[0].style.width = '50%';
+    headinner.children[0].style.textAlign = 'left';
+
+    headinner.children[1].style.order = '3';
+    headinner.children[1].style.width = '100%';
+    headinner.children[1].style.justifyContent = 'center';
+    headinner.children[1].style.flexDirection = 'column';
+    headinner.children[1].style.alignItems = 'center';
+
+    headinner.children[2].style.order = '2';
+    headinner.children[2].style.width = '50%';
+    headinner.children[2].style.textAlign = 'right';
+
     CoffeeSwipers.forEach((Swiper) => {
       Swiper.params.slidesPerView = 3;
       Swiper.params.spaceBetween = 24;
       Swiper.update();
-
-      sec4main.style.flexDirection = 'row';
-      sec4main.firstElementChild.style.width = '49%';
-      sec4main.firstElementChild.style.order = '1';
-      sec4main.lastElementChild.style.width = '49%';
-      sec4main.lastElementChild.style.order = '2';
-      sec4main.lastElementChild.firstElementChild.style.position = 'absolute';
-      sec4main.lastElementChild.lastElementChild.style.position = 'absolute';
-
-      Testimonial_Swiper.params.slidesPerView = 3;
-      Testimonial_Swiper.params.spaceBetween = 30;
-      Testimonial_Swiper.update();
-      sec6ul.style.flexDirection = 'row';
     });
+
+    sec4main.style.flexDirection = 'row';
+    sec4main.firstElementChild.style.width = '49%';
+    sec4main.firstElementChild.style.order = '1';
+    sec4main.lastElementChild.style.width = '49%';
+    sec4main.lastElementChild.style.order = '2';
+    sec4main.lastElementChild.firstElementChild.style.position = 'absolute';
+    sec4main.lastElementChild.lastElementChild.style.position = 'absolute';
+
+    Testimonial_Swiper.params.slidesPerView = 3;
+    Testimonial_Swiper.params.spaceBetween = 30;
+    Testimonial_Swiper.update();
+
+    sec6ul.style.flexDirection = 'row';
   } else {
+    headinner.style.flexWrap = 'nowrap';
+    headinner.style.justifyContent = 'space-between';
+
+    headinner.children[0].style.order = '1';
+    headinner.children[0].style.width = 'auto';
+    headinner.children[0].style.textAlign = 'none';
+
+    headinner.children[1].style.order = '2';
+    headinner.children[1].style.width = 'auto';
+    headinner.children[1].style.justifyContent = 'space-between';
+    headinner.children[1].style.flexDirection = 'row';
+    headinner.children[1].style.alignItems = 'center';
+
+    headinner.children[2].style.order = '3';
+    headinner.children[2].style.width = 'auto';
+    headinner.children[2].style.textAlign = 'none';
+
     CoffeeSwipers.forEach((Swiper) => {
       Swiper.params.slidesPerView = 4;
       Swiper.params.spaceBetween = 32;
       Swiper.update();
-
-      sec4main.style.flexDirection = 'row';
-      sec4main.firstElementChild.style.width = '49%';
-      sec4main.firstElementChild.style.order = '1';
-      sec4main.lastElementChild.style.width = '49%';
-      sec4main.lastElementChild.style.order = '2';
-      sec4main.lastElementChild.firstElementChild.style.position = 'absolute';
-      sec4main.lastElementChild.lastElementChild.style.position = 'absolute';
-
-      Testimonial_Swiper.params.slidesPerView = 3;
-      Testimonial_Swiper.params.spaceBetween = 30;
-      Testimonial_Swiper.update();
-      sec6ul.style.flexDirection = 'row';
     });
+
+    sec4main.style.flexDirection = 'row';
+    sec4main.firstElementChild.style.width = '49%';
+    sec4main.firstElementChild.style.order = '1';
+    sec4main.lastElementChild.style.width = '49%';
+    sec4main.lastElementChild.style.order = '2';
+    sec4main.lastElementChild.firstElementChild.style.position = 'absolute';
+    sec4main.lastElementChild.lastElementChild.style.position = 'absolute';
+
+    Testimonial_Swiper.params.slidesPerView = 3;
+    Testimonial_Swiper.params.spaceBetween = 30;
+    Testimonial_Swiper.update();
+
+    sec6ul.style.flexDirection = 'row';
   }
 }
 

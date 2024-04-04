@@ -41,6 +41,10 @@
   width: 100%;
 }
 
+.sec1 .common_button {
+  font-size: 10px;
+}
+
 .sec2 {
   padding: 5rem;
 }
@@ -548,27 +552,6 @@
 
 /* 브라우저마다 스크롤바 다를 수 있음 */
 @media screen and (max-width: 1042px) {
-  .head .inner {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .head .inner h1 {
-    order: 1;
-    width: 50%;
-    text-align: center;
-  }
-  .head .inner nav {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-  }
-  .head .inner div {
-    order: 2;
-    width: 50%;
-    text-align: center;
-  }
-
   .sec2 {
     padding: 0;
   }
@@ -581,10 +564,6 @@
     font-size: 20px;
     line-height: 1rem;
   }
-
-  /* .sec4 a {
-    font-size: 1rem;
-  } */
 
   .sec5 .TestimonialItem {
     padding-left: 0;
