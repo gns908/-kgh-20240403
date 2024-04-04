@@ -286,6 +286,10 @@
   padding-bottom: 5rem;
 }
 
+.sec4 .left .common_button {
+  font-size: 1rem;
+}
+
 .sec4 .right {
   width: 49%;
   position: relative;
@@ -295,13 +299,13 @@
   width: 45%;
 }
 
-.sec4 img:nth-of-type(1) {
+.sec4 .right img:nth-of-type(1) {
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.sec4 img:nth-of-type(2) {
+.sec4 .right img:nth-of-type(2) {
   position: absolute;
   top: 0;
   right: 0;
@@ -419,6 +423,7 @@
 .sec6 .bottom {
   padding-top: 5rem;
   padding-bottom: 6rem;
+  font-size: 1rem;
 }
 
 .foot {
@@ -577,9 +582,9 @@
     line-height: 1rem;
   }
 
-  .sec4 a {
+  /* .sec4 a {
     font-size: 1rem;
-  }
+  } */
 
   .sec5 .TestimonialItem {
     padding-left: 0;
@@ -601,25 +606,6 @@
   .sec5 p {
     font-size: 1rem;
   }
-  /*     flex-direction: column; */
-  /* .sec6 li {
-    width: 30%;
-  }
-
-  .sec6 .left_right img {
-    transform: scale(0.5);
-  }
-
-  .sec6 span {
-    font-size: 0.3rem;
-    position: relative;
-    top: -7px;
-  }
-
-  .sec6 p {
-    font-size: 0.5rem;
-    line-height: 0.5rem;
-  } */
 
   .foot .inner {
     gap: 0;

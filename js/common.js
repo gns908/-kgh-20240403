@@ -1,8 +1,6 @@
 // 테스트 js
 const test = document.querySelector('.test');
 
-// test.textContent = document.documentElement.clientWidth;
-
 window.addEventListener('resize', handleResize);
 
 // 버튼
@@ -86,6 +84,8 @@ var Testimonial_Swiper = new Swiper('.Testimonial_Swiper', {
 
 const CoffeeSwipers = [Arabica_Swiper, Robusta_Swiper, Liberica_Swiper];
 
+const sec4main = document.querySelector('.sec4 .main');
+
 const sec6ul = document.querySelector('.sec6 ul');
 
 function handleResize() {
@@ -96,6 +96,15 @@ function handleResize() {
       Swiper.params.slidesPerView = 1;
       Swiper.params.spaceBetween = 8;
       Swiper.update();
+
+      sec4main.style.flexDirection = 'column';
+      sec4main.firstElementChild.style.width = '100%';
+      sec4main.firstElementChild.style.order = '2';
+      sec4main.lastElementChild.style.width = '100%';
+      sec4main.lastElementChild.style.order = '1';
+      sec4main.lastElementChild.firstElementChild.style.position = 'relative';
+      sec4main.lastElementChild.lastElementChild.style.position = 'relative';
+
       Testimonial_Swiper.params.slidesPerView = 1;
       Testimonial_Swiper.params.spaceBetween = 10;
       Testimonial_Swiper.update();
@@ -106,6 +115,15 @@ function handleResize() {
       Swiper.params.slidesPerView = 2;
       Swiper.params.spaceBetween = 16;
       Swiper.update();
+
+      sec4main.style.flexDirection = 'column';
+      sec4main.firstElementChild.style.width = '100%';
+      sec4main.firstElementChild.style.order = '2';
+      sec4main.lastElementChild.style.width = '100%';
+      sec4main.lastElementChild.style.order = '1';
+      sec4main.lastElementChild.firstElementChild.style.position = 'relative';
+      sec4main.lastElementChild.lastElementChild.style.position = 'relative';
+
       Testimonial_Swiper.params.slidesPerView = 2;
       Testimonial_Swiper.params.spaceBetween = 20;
       Testimonial_Swiper.update();
@@ -116,16 +134,34 @@ function handleResize() {
       Swiper.params.slidesPerView = 3;
       Swiper.params.spaceBetween = 24;
       Swiper.update();
+
+      sec4main.style.flexDirection = 'row';
+      sec4main.firstElementChild.style.width = '49%';
+      sec4main.firstElementChild.style.order = '1';
+      sec4main.lastElementChild.style.width = '49%';
+      sec4main.lastElementChild.style.order = '2';
+      sec4main.lastElementChild.firstElementChild.style.position = 'absolute';
+      sec4main.lastElementChild.lastElementChild.style.position = 'absolute';
+
       Testimonial_Swiper.params.slidesPerView = 3;
       Testimonial_Swiper.params.spaceBetween = 30;
       Testimonial_Swiper.update();
       sec6ul.style.flexDirection = 'row';
     });
-  } else if (document.documentElement.clientWidth < 1280) {
+  } else {
     CoffeeSwipers.forEach((Swiper) => {
       Swiper.params.slidesPerView = 4;
       Swiper.params.spaceBetween = 32;
       Swiper.update();
+
+      sec4main.style.flexDirection = 'row';
+      sec4main.firstElementChild.style.width = '49%';
+      sec4main.firstElementChild.style.order = '1';
+      sec4main.lastElementChild.style.width = '49%';
+      sec4main.lastElementChild.style.order = '2';
+      sec4main.lastElementChild.firstElementChild.style.position = 'absolute';
+      sec4main.lastElementChild.lastElementChild.style.position = 'absolute';
+
       Testimonial_Swiper.params.slidesPerView = 3;
       Testimonial_Swiper.params.spaceBetween = 30;
       Testimonial_Swiper.update();
