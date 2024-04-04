@@ -86,6 +86,8 @@ var Testimonial_Swiper = new Swiper('.Testimonial_Swiper', {
 
 const CoffeeSwipers = [Arabica_Swiper, Robusta_Swiper, Liberica_Swiper];
 
+const sec6ul = document.querySelector('.sec6 ul');
+
 function handleResize() {
   test.textContent = document.documentElement.clientWidth;
 
@@ -94,28 +96,42 @@ function handleResize() {
       Swiper.params.slidesPerView = 1;
       Swiper.params.spaceBetween = 8;
       Swiper.update();
+      Testimonial_Swiper.params.slidesPerView = 1;
+      Testimonial_Swiper.params.spaceBetween = 10;
+      Testimonial_Swiper.update();
+      sec6ul.style.flexDirection = 'column';
     });
   } else if (document.documentElement.clientWidth < 640) {
     CoffeeSwipers.forEach((Swiper) => {
       Swiper.params.slidesPerView = 2;
       Swiper.params.spaceBetween = 16;
       Swiper.update();
+      Testimonial_Swiper.params.slidesPerView = 2;
+      Testimonial_Swiper.params.spaceBetween = 20;
+      Testimonial_Swiper.update();
+      sec6ul.style.flexDirection = 'column';
     });
   } else if (document.documentElement.clientWidth < 960) {
     CoffeeSwipers.forEach((Swiper) => {
       Swiper.params.slidesPerView = 3;
       Swiper.params.spaceBetween = 24;
       Swiper.update();
+      Testimonial_Swiper.params.slidesPerView = 3;
+      Testimonial_Swiper.params.spaceBetween = 30;
+      Testimonial_Swiper.update();
+      sec6ul.style.flexDirection = 'row';
     });
   } else if (document.documentElement.clientWidth < 1280) {
     CoffeeSwipers.forEach((Swiper) => {
       Swiper.params.slidesPerView = 4;
       Swiper.params.spaceBetween = 32;
       Swiper.update();
+      Testimonial_Swiper.params.slidesPerView = 3;
+      Testimonial_Swiper.params.spaceBetween = 30;
+      Testimonial_Swiper.update();
+      sec6ul.style.flexDirection = 'row';
     });
   }
-
-  console.log(Arabica_Swiper.params.slidesPerView);
 }
 
 handleResize();

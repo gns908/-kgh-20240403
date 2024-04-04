@@ -541,7 +541,6 @@
   font-size: 2rem;
 }
 
-/* @media screen and (max-width: 1024px) { */
 /* 브라우저마다 스크롤바 다를 수 있음 */
 @media screen and (max-width: 1042px) {
   .head .inner {
@@ -578,58 +577,6 @@
     line-height: 1rem;
   }
 
-  /* .sec3 {
-    padding-bottom: 0;
-  }
-
-  .sec3 .btns {
-    width: 400px;
-  }
-
-  .sec3 .btns * {
-    font-size: 1.5rem !important;
-  }
-
-  .sec3 .swipers {
-    height: 320px !important;
-  }
-
-  .sec3 .coffeeItem h3 {
-    font-size: 0.5rem;
-    padding-top: 0.5rem;
-    padding-left: 0.5rem;
-  }
-
-  .sec3 .coffeeItem p:nth-of-type(1) {
-    padding-left: 0rem;
-  }
-
-  .sec3 .coffeeItem p {
-    font-size: 0.5rem;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .sec3 .coffeeItem p span {
-    font-size: 7px;
-    position: relative;
-    top: -2px;
-  }
-
-  .sec3 .coffeeItem p img {
-    padding-right: 0;
-    transform: scale(0.5);
-  }
-
-  .sec3 .coffeeItem > span {
-    padding-left: 0.5rem;
-    font-size: 1rem;
-  }
-
-  .sec3 .coffeeItem img:nth-last-of-type(1) {
-    transform: scale(0.5) translateX(50%) translateY(50%);
-  } */
-
   .sec4 a {
     font-size: 1rem;
   }
@@ -654,8 +601,8 @@
   .sec5 p {
     font-size: 1rem;
   }
-
-  .sec6 li {
+  /*     flex-direction: column; */
+  /* .sec6 li {
     width: 30%;
   }
 
@@ -672,7 +619,7 @@
   .sec6 p {
     font-size: 0.5rem;
     line-height: 0.5rem;
-  }
+  } */
 
   .foot .inner {
     gap: 0;
