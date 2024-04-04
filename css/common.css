@@ -26,13 +26,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: scale(2) translate(-50%, -50%);
+  transform: scale(1) translate(calc(-50% - 1rem), -50%);
 }
 .SeachScreen button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: scale(2) translate(calc(-50% + 7rem), -50%);
+  transform: scale(1) translate(calc(-50% + 6rem), -50%);
 }
 
 body > div {
@@ -55,7 +55,6 @@ body > div {
   color: white;
   padding: 1.5rem 3rem 1.5rem 3rem;
   border-radius: 0 2rem 0 2rem;
-  /* position: relative; */
 }
 
 /* <a href="#" class="common_button">
