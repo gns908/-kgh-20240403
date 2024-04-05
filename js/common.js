@@ -1,29 +1,26 @@
+let SeachModal = false;
+let hamModal = false;
+
+setTimeout(() => {}, '2000');
+const OnScrollWidth = document.body.getBoundingClientRect().width;
+document.body.style.overflow = 'hidden';
+setTimeout(() => {}, '2000');
+const OffScrollWidth = document.body.getBoundingClientRect().width;
+document.body.style.overflowY = 'scroll';
+document.body.style.overflowX = 'hidden';
+const ScrollWidth = OffScrollWidth - OnScrollWidth;
+console.log(OffScrollWidth);
+console.log(OnScrollWidth);
+console.log(ScrollWidth);
+
 // 테스트 js
 const test = document.querySelector('.test');
 
-window.addEventListener('resize', handleResize);
-
-// 버튼
-
 const btns = document.querySelector('.btns');
-
 const btnItems = document.querySelectorAll('.btns > button');
 const swipers = document.querySelectorAll('.swipers > div');
 
 const newNode = document.createElement('span');
-
-newNode.textContent = '';
-newNode.style.position = 'absolute';
-newNode.style.backgroundColor = 'white';
-newNode.style.width = '30%';
-newNode.style.height = '80%';
-newNode.style.top = '10%';
-newNode.style.borderRadius = '2rem';
-newNode.style.transition = '0.3s';
-newNode.style.zIndex = '0';
-
-newNode.style.left = '2%';
-
 btns.appendChild(newNode);
 
 btnItems.forEach((btnItem, idx) => {
@@ -47,242 +44,217 @@ btnItems.forEach((btnItem, idx) => {
 });
 
 var Arabica_Swiper = new Swiper('.Arabica_Swiper', {
-  slidesPerView: 4,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 8,
   pagination: {
     el: '.Arabica_pagination',
     clickable: true,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    960: {
+      slidesPerView: 4,
+      spaceBetween: 32,
+    },
+  },
 });
 
 var Robusta_Swiper = new Swiper('.Robusta_Swiper', {
-  slidesPerView: 4,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 8,
   pagination: {
     el: '.Robusta_pagination',
     clickable: true,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    960: {
+      slidesPerView: 4,
+      spaceBetween: 32,
+    },
+  },
 });
 
 var Liberica_Swiper = new Swiper('.Liberica_Swiper', {
-  slidesPerView: 4,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 8,
   pagination: {
     el: '.Liberica_pagination',
     clickable: true,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    960: {
+      slidesPerView: 4,
+      spaceBetween: 32,
+    },
+  },
 });
 
 var Testimonial_Swiper = new Swiper('.Testimonial_Swiper', {
-  slidesPerView: 3,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 10,
   pagination: {
     el: '.Testimonial_pagination',
     clickable: true,
   },
+  breakpoints: {
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 });
-
-const CoffeeSwipers = [Arabica_Swiper, Robusta_Swiper, Liberica_Swiper];
-
-const sec4main = document.querySelector('.sec4 .main');
-
-const sec6ul = document.querySelector('.sec6 ul');
-
-const headinner = document.querySelector('.head .inner');
-
-// .head .inner {
-//   flex-wrap: wrap;
-//   justify-content: center;
-// }
-
-// .head .inner h1 {
-//   order: 1;
-//   width: 50%;
-//   text-align: left;
-// }
-// .head .inner nav {
-//   order: 3;
-//   width: 100%;
-//   justify-content: center;
-//   flex-direction: column;
-//   align-items: center;
-// }
-// .head .inner div {
-//   order: 2;
-//   width: 50%;
-//   text-align: right;
-// }
 
 function handleResize() {
   test.textContent = document.documentElement.clientWidth;
-
-  if (document.documentElement.clientWidth < 320) {
-    headinner.style.flexWrap = 'wrap';
-    headinner.style.justifyContent = 'center';
-
-    headinner.children[0].style.order = '1';
-    headinner.children[0].style.width = '50%';
-    headinner.children[0].style.textAlign = 'left';
-
-    headinner.children[1].style.order = '3';
-    headinner.children[1].style.width = '100%';
-    headinner.children[1].style.justifyContent = 'center';
-    headinner.children[1].style.flexDirection = 'column';
-    headinner.children[1].style.alignItems = 'center';
-
-    headinner.children[2].style.order = '2';
-    headinner.children[2].style.width = '50%';
-    headinner.children[2].style.textAlign = 'right';
-
-    CoffeeSwipers.forEach((Swiper) => {
-      Swiper.params.slidesPerView = 1;
-      Swiper.params.spaceBetween = 8;
-      Swiper.update();
-    });
-
-    sec4main.style.flexDirection = 'column';
-    sec4main.firstElementChild.style.width = '100%';
-    sec4main.firstElementChild.style.order = '2';
-    sec4main.lastElementChild.style.width = '100%';
-    sec4main.lastElementChild.style.order = '1';
-    sec4main.lastElementChild.firstElementChild.style.position = 'relative';
-    sec4main.lastElementChild.lastElementChild.style.position = 'relative';
-
-    Testimonial_Swiper.params.slidesPerView = 1;
-    Testimonial_Swiper.params.spaceBetween = 10;
-    Testimonial_Swiper.update();
-
-    sec6ul.style.flexDirection = 'column';
-  } else if (document.documentElement.clientWidth < 640) {
-    headinner.style.flexWrap = 'wrap';
-    headinner.style.justifyContent = 'center';
-
-    headinner.children[0].style.order = '1';
-    headinner.children[0].style.width = '50%';
-    headinner.children[0].style.textAlign = 'left';
-
-    headinner.children[1].style.order = '3';
-    headinner.children[1].style.width = '100%';
-    headinner.children[1].style.justifyContent = 'center';
-    headinner.children[1].style.flexDirection = 'column';
-    headinner.children[1].style.alignItems = 'center';
-
-    headinner.children[2].style.order = '2';
-    headinner.children[2].style.width = '50%';
-    headinner.children[2].style.textAlign = 'right';
-
-    CoffeeSwipers.forEach((Swiper) => {
-      Swiper.params.slidesPerView = 2;
-      Swiper.params.spaceBetween = 16;
-      Swiper.update();
-    });
-
-    sec4main.style.flexDirection = 'column';
-    sec4main.firstElementChild.style.width = '100%';
-    sec4main.firstElementChild.style.order = '2';
-    sec4main.lastElementChild.style.width = '100%';
-    sec4main.lastElementChild.style.order = '1';
-    sec4main.lastElementChild.firstElementChild.style.position = 'relative';
-    sec4main.lastElementChild.lastElementChild.style.position = 'relative';
-
-    Testimonial_Swiper.params.slidesPerView = 2;
-    Testimonial_Swiper.params.spaceBetween = 20;
-    Testimonial_Swiper.update();
-
-    sec6ul.style.flexDirection = 'column';
-  } else if (document.documentElement.clientWidth < 960) {
-    headinner.style.flexWrap = 'wrap';
-    headinner.style.justifyContent = 'center';
-
-    headinner.children[0].style.order = '1';
-    headinner.children[0].style.width = '50%';
-    headinner.children[0].style.textAlign = 'left';
-
-    headinner.children[1].style.order = '3';
-    headinner.children[1].style.width = '100%';
-    headinner.children[1].style.justifyContent = 'center';
-    headinner.children[1].style.flexDirection = 'column';
-    headinner.children[1].style.alignItems = 'center';
-
-    headinner.children[2].style.order = '2';
-    headinner.children[2].style.width = '50%';
-    headinner.children[2].style.textAlign = 'right';
-
-    CoffeeSwipers.forEach((Swiper) => {
-      Swiper.params.slidesPerView = 3;
-      Swiper.params.spaceBetween = 24;
-      Swiper.update();
-    });
-
-    sec4main.style.flexDirection = 'row';
-    sec4main.firstElementChild.style.width = '49%';
-    sec4main.firstElementChild.style.order = '1';
-    sec4main.lastElementChild.style.width = '49%';
-    sec4main.lastElementChild.style.order = '2';
-    sec4main.lastElementChild.firstElementChild.style.position = 'absolute';
-    sec4main.lastElementChild.lastElementChild.style.position = 'absolute';
-
-    Testimonial_Swiper.params.slidesPerView = 3;
-    Testimonial_Swiper.params.spaceBetween = 30;
-    Testimonial_Swiper.update();
-
-    sec6ul.style.flexDirection = 'row';
-  } else {
-    headinner.style.flexWrap = 'nowrap';
-    headinner.style.justifyContent = 'space-between';
-
-    headinner.children[0].style.order = '1';
-    headinner.children[0].style.width = 'auto';
-    headinner.children[0].style.textAlign = 'none';
-
-    headinner.children[1].style.order = '2';
-    headinner.children[1].style.width = 'auto';
-    headinner.children[1].style.justifyContent = 'space-between';
-    headinner.children[1].style.flexDirection = 'row';
-    headinner.children[1].style.alignItems = 'center';
-
-    headinner.children[2].style.order = '3';
-    headinner.children[2].style.width = 'auto';
-    headinner.children[2].style.textAlign = 'none';
-
-    CoffeeSwipers.forEach((Swiper) => {
-      Swiper.params.slidesPerView = 4;
-      Swiper.params.spaceBetween = 32;
-      Swiper.update();
-    });
-
-    sec4main.style.flexDirection = 'row';
-    sec4main.firstElementChild.style.width = '49%';
-    sec4main.firstElementChild.style.order = '1';
-    sec4main.lastElementChild.style.width = '49%';
-    sec4main.lastElementChild.style.order = '2';
-    sec4main.lastElementChild.firstElementChild.style.position = 'absolute';
-    sec4main.lastElementChild.lastElementChild.style.position = 'absolute';
-
-    Testimonial_Swiper.params.slidesPerView = 3;
-    Testimonial_Swiper.params.spaceBetween = 30;
-    Testimonial_Swiper.update();
-
-    sec6ul.style.flexDirection = 'row';
-  }
 }
 
 handleResize();
+
+window.addEventListener('resize', handleResize);
 
 const SeachBtn = document.querySelector('.SeachBtn');
 const SeachScreen = document.querySelector('.SeachScreen');
 const SeachInput = document.querySelector('.SeachScreen input');
 
 SeachBtn.addEventListener('click', (e) => {
+  SeachModal = true;
   e.preventDefault();
   SeachScreen.classList.add('On');
   setTimeout(() => {
     SeachInput.focus();
   }, 300);
+  ScrollOff();
 });
 
 SeachScreen.addEventListener('click', (e) => {
+  SeachModal = false;
   if (e.target === SeachScreen) {
     SeachScreen.classList.remove('On');
   }
+  ScrollOn();
 });
+
+const head = document.querySelector('.head');
+
+const ham = document.createElement('a');
+
+head.appendChild(ham);
+
+ham.appendChild(document.createElement('img'));
+
+const back = document.createElement('div');
+
+head.prepend(back);
+
+ham.addEventListener('click', () => {
+  hamModal = true;
+  head.firstElementChild.style.visibility = 'visible';
+  head.firstElementChild.style.opacity = '1';
+  head.querySelector('.inner').style.visibility = 'visible';
+  head.querySelector('.inner').style.opacity = '1';
+  ham.style.visibility = 'hidden';
+  ham.style.opacity = '0';
+  ScrollOff();
+});
+
+back.addEventListener('click', () => {
+  backF();
+});
+
+function backF() {
+  hamModal = false;
+  head.firstElementChild.style.visibility = 'hidden';
+  head.firstElementChild.style.opacity = '0';
+  head.querySelector('.inner').style.visibility = 'hidden';
+  head.querySelector('.inner').style.opacity = '0';
+  ham.style.visibility = 'visible';
+  ham.style.opacity = '1';
+  ScrollOn();
+}
+
+let mql = window.matchMedia('(max-width: 1044px)');
+
+function screenTest(e) {
+  if (e.matches) {
+    // setTimeout(function () {
+    //   document.querySelector('.head .inner').classList.add('On');
+    // }, '3500');
+    // console.log('화면 너비가 1044px 이하입니다.');
+  } else {
+    backF();
+    // console.log('화면 너비가 1044px 초과입니다.');
+  }
+}
+
+mql.addEventListener('change', screenTest);
+
+function ScrollOff() {
+  document.body.style.overflow = 'hidden';
+  document.body.style.marginRight = `${ScrollWidth}px`;
+}
+function ScrollOn() {
+  if (SeachModal === false && hamModal === false) {
+    document.body.style.overflowY = 'scroll';
+    document.body.style.overflowX = 'hidden';
+    document.body.style.marginRight = '0';
+  }
+}
+
+function ScrollStop() {
+  window.addEventListener(
+    'scroll',
+    function (e) {
+      console.log('스크롤1');
+      e.preventDefault();
+      e.stopPropagation();
+    },
+    { passive: false }
+  );
+
+  document.body.addEventListener(
+    'wheel',
+    function (e) {
+      console.log('굴림');
+      e.preventDefault();
+      e.stopPropagation();
+    },
+    { passive: false }
+  );
+
+  document.body.addEventListener(
+    'touchmove',
+    function (e) {
+      console.log('터치');
+      e.preventDefault();
+      e.stopPropagation();
+    },
+    { passive: false }
+  );
+}

@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s;
 }
 
 .head .gnb {
@@ -63,22 +64,33 @@
 }
 
 .sec2 li:not(:last-of-type)::after {
-  content: '';
   position: absolute;
-  width: 2px;
-  height: 100%;
   right: 0;
-  background-image: url(../img/common/Intersect.svg);
-  background-repeat: no-repeat;
+  content: '';
+  width: 1px;
+  opacity: 0.2;
+  height: 80%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .sec2 strong {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .sec2 span {
   font-size: 20px;
-  line-height: 3rem;
+  line-height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
 }
 
 .sec3 {
@@ -101,16 +113,27 @@
 
 .sec3 .btns {
   background-color: lightgray;
-  border-radius: 2rem;
+  border-radius: 50px;
   display: inline-block;
   position: relative;
-  /* width: 560px; */
-  /* width: 480px; */
-  width: 220px;
+  min-width: 240px;
+  width: 35%;
+  max-width: 560px;
   height: 80px;
   margin-top: 4rem;
   margin-bottom: 2rem;
-  /* font-size: 1px; */
+}
+
+.sec3 .btns span {
+  position: absolute;
+  top: 10%;
+  width: 30%;
+  height: 80%;
+  background-color: white;
+  border-radius: 50px;
+  z-index: 0;
+  transition: 0.3s;
+  left: 2%;
 }
 
 .sec3 .swipers > div.On {
@@ -121,7 +144,9 @@
 .sec3 .btns button {
   border: none;
   background-color: transparent;
-  font-size: 12px;
+  /* font-size: 12px; */
+  font-size: 1.3rem;
+  /* font-size: 75%; */
   position: absolute;
   width: 30%;
   height: 80%;
@@ -157,23 +182,15 @@
   opacity: 0;
   position: absolute;
   transition: 0.3s;
-  /* border: 1px solid blue; */
 }
 
 .sec3 .swipers > * .swiper-wrapper {
-  /* border: 10px solid purple; */
   height: 90%;
 }
 
-.sec3 .swipers > * .swiper-wrapper .swiper-slide {
-  /* border: 10px solid orange; */
-}
-
 .sec3 .coffeeItem {
-  /* text-align: left; */
   position: relative;
   height: 100%;
-  /* border: 3px solid red; */
 }
 
 .sec3 .coffeeItem > img:nth-of-type(1) {
@@ -181,23 +198,12 @@
 }
 
 .sec3 .coffeeItem h3 {
-  /* padding-top: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1rem; */
   font-size: 1.3rem;
   height: 4rem;
-  /* border: 3px solid orange; */
+
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-wrap: wrap; */
-  /* text-align: center; */
-}
-
-.sec3 .coffeeItem p {
-  /* padding-left: 1rem; */
-  /* padding-bottom: 1rem; */
-  /* font-size: 19px; */
 }
 
 .sec3 .coffeeItem p:nth-of-type(1) {
@@ -210,21 +216,10 @@
   padding-bottom: 1rem;
 }
 
-.sec3 .coffeeItem p:nth-of-type(1) span {
-  /* font-size: 13px;
-  text-align: left;
-  padding-left: 1rem; */
-  /* display: flex; */
-  /* justify-content: flex-start; */
-}
-
 .sec3 .coffeeItem p:nth-of-type(2) {
-  /* padding-left: 1rem; */
   font-size: 1rem;
   text-align: left;
   padding-left: 1rem;
-  /* height: 1rem; */
-  /* border: 3px solid violet; */
 }
 
 .sec3 .coffeeItem p img {
@@ -233,7 +228,6 @@
 }
 
 .sec3 .coffeeItem > span {
-  /* padding-left: 1rem; */
   position: absolute;
   bottom: 8px;
   left: 1rem;
@@ -384,7 +378,7 @@
 
 .sec6 li {
   border: 3px solid lightgray;
-  border-radius: 0 20% 0 10%;
+  border-radius: 0 50px 0 50px;
   padding-top: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -519,10 +513,6 @@
   align-items: center;
 }
 
-.foot .bottom div > * {
-  /* border: 1px solid red; */
-}
-
 .foot .bottom div img {
   flex: 1;
 }
@@ -550,27 +540,141 @@
   font-size: 2rem;
 }
 
+@media screen and (min-width: 1045px) {
+  .head .inner {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  /* .head > div:nth-of-type(1) {
+    visibility: hidden;
+    opacity: 0;
+  } */
+  /* head.firstElementChild.style.visibility = 'visible';
+  head.firstElementChild.style.opacity = '1';
+
+  ham.style.visibility = 'hidden';
+  ham.style.opacity = '0'; */
+}
+
 /* 브라우저마다 스크롤바 다를 수 있음 */
-@media screen and (max-width: 1042px) {
-  .sec2 {
-    padding: 0;
+@media screen and (max-width: 1044px) {
+  .head {
+    position: fixed;
+    z-index: 5;
+    width: 90%;
+    text-align: right;
+  }
+  .head > div:nth-of-type(1) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+
+    z-index: 10;
   }
 
+  .head .inner {
+    visibility: hidden;
+    opacity: 0;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: aliceblue;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+  }
+
+  .head .inner.On {
+  }
+
+  .head .inner h1 {
+    order: 1;
+    width: 50%;
+    text-align: left;
+  }
+
+  .head .inner nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .head .inner div {
+    order: 2;
+    width: 50%;
+    text-align: right;
+  }
+
+  .head > a {
+    display: inline-block;
+    transition: 0.3s;
+    border: 3px solid black;
+    width: 3rem;
+    z-index: 10;
+    background-color: aliceblue;
+  }
+  .head > a > img {
+    content: url('../img/header/hamburger.png');
+    width: 100%;
+  }
+
+  .sec2 ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .sec2 li {
+    align-items: center;
+  }
+
+  .sec2 li:not(:last-of-type)::after {
+    width: 10rem;
+    height: 1px;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -1rem;
+  }
+
+  /* 폰트 사이즈 변경 */
   .sec2 strong {
-    font-size: 3rem;
+    font-size: 2rem;
+    min-width: 60px;
   }
 
   .sec2 span {
-    font-size: 20px;
+    font-size: 1rem;
     line-height: 1rem;
   }
 
-  .sec5 .TestimonialItem {
-    padding-left: 0;
+  .sec3 .btns button {
+    font-size: 12px;
   }
 
-  .sec5 .TestimonialItem .top {
+  .sec4 .main {
     flex-direction: column;
+  }
+  .sec4 .main div:nth-of-type(1) {
+    width: 100%;
+    order: 2;
+  }
+
+  .sec4 .main div:nth-of-type(2) {
+    width: 100%;
+    order: 1;
+  }
+
+  .sec4 .main div:nth-of-type(2) img {
+    position: relative;
   }
 
   .sec5 .right h3 {
@@ -578,12 +682,18 @@
   }
 
   .sec5 .right div {
-    gap: 0rem;
-    justify-content: space-between;
+    gap: 0px;
+  }
+  .sec5 .right img {
+    transform: translateX(-30%);
   }
 
-  .sec5 p {
-    font-size: 1rem;
+  .sec6 ul {
+    flex-wrap: wrap;
+  }
+  .sec6 li {
+    width: 100%;
+    padding: 1rem;
   }
 
   .foot .inner {
